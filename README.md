@@ -1,4 +1,15 @@
 # my_reddit_project
-#in this project we will implement a new version of Reddit APP 
-#mockup of the APP is based on a black, minimal mockup i copy from 
+The goal of this project is to implement a new version of Reddit WebApp
+https://www.reddit.com
+
+WIREFRAME
+for the wireframe i decide to use a mockup of a mock-up project:
 https://www.behance.net/gallery/121471051/Reddit-Redesign
+
+TECNOLOGIES
+for this project i use different tecnologie for different purpose:
+- Developing with HTML, CSS, JavaScript, React, Redux
+- Unit test with Jest and Enzyme
+- Version control with Git
+
+FEATURES
