@@ -1,0 +1,36 @@
+Trcking file
+Color Palette:
+sidebar: rgb(34,34,34)
+bakcground: rgb(27,27,27)
+section : rgb(41,41,41)
+color-logo: rgb(235,85,40)
+
+Structure Note:
+0. Sidebar:
+- home icon 
+- popular post 
+- mobile logo on the left
+
+
+
+0. General
+- no notification 
+
+1. home
+
+2. Post
+
+3. Post popular 
+- desktop barra laterale con comunites 
+- mobile con sopra top community 
+
+
+4. community popular
+- create new post 
+
+5. Logout 
+
+
+
+- write post(togliere da )
+- 

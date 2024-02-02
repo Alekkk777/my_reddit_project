@@ -1,0 +1,166 @@
+body{
+    background-color: rgb(27,27,27);
+}
+/* Stili di base per il layout del desktop */
+.sidebar {
+    position: fixed;
+    top: 20px; /* Distanza dal bordo superiore */
+    left: 20px; /* Distanza dal bordo sinistro */
+    bottom: 20px; /* Distanza dal bordo inferiore */
+    background-color: rgb(34,34,34);
+    width: 175px; /* Larghezza fissa della sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra le icone orizzontalmente */
+    justify-content: flex-start; /* Allinea il contenuto in alto */
+    overflow-y: hidden;
+    border-radius: 15px; /* Angoli arrotondati */
+    padding-top: 100px; /* Spazio per il logo */
+    box-shadow: 20px;
+}
+
+.logo {
+    display: none; /* Nasconde entrambi i loghi per impostazione predefinita */
+    max-width: 100px; /* o la dimensione che preferisci */
+    height: auto;
+}
+.logo-container {
+    background: rgb(34,34,34);
+    position: absolute;
+    top: 0; /* Distanza dal top della sidebar */
+    left: 50%; /* Posiziona il centro del logo a metà della sidebar */
+    transform: translateX(-50%); /* Centra orizzontalmente il logo all'interno della sidebar */
+    width: 100%; /* Imposta la larghezza al 100% della sidebar per permettere il centramento */
+    z-index: 11; /* Assicurati che il logo-container sia sopra la sidebar */
+}
+.logo-desktop {
+    background-color: rgb(34,34,34);
+    display: block; /* Mostra il logo desktop */
+    max-width: 130px; /* Limita la larghezza del logo alla larghezza della sidebar */
+    max-height: 130px; /* Imposta l'altezza massima del logo */
+    margin: 15px auto; /* Margini automatici per centrare il logo all'interno del suo contenitore */
+}
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra le icone all'interno della sidebar */
+    width: 100%;
+    padding-top: 100px;
+    padding-top: 50px;
+}
+
+.icon {
+    display: flex; /* Assicurati che l'icona sia un flex container */
+    justify-content: center; /* Centra l'icona orizzontalmente */
+    align-items: center; /* Centra l'icona verticalmente */
+    margin: 25px 10px;
+    width: 50px; /* Riduci la larghezza delle icone */
+    height: 50px; /* Riduci l'altezza delle icone */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    padding: 10px; /* Aggiungi un po' di spazio intorno all'icona */
+}
+.icon.selected {
+    border-radius: 10px; /* Rendi il bordo tondeggiante */
+    padding: 5px; /* Spaziatura intorno all'icona */
+    background-color: rgb(235,85,40);
+}
+.icon > div {
+    width: 100%; /* Assicurati che il div occupi tutto lo spazio dell'icona */
+    height: 100%; /* Assicurati che il div occupi tutto lo spazio dell'icona */
+    display: flex; /* Utilizza flex per centrare il contenuto SVG */
+    justify-content: center; /* Centra l'SVG orizzontalmente */
+    align-items: center; /* Centra l'SVG verticalmente */
+}
+.icon svg {
+    pointer-events: none;
+}
+.icon-container {
+    width: 100%; /* Assicurati che il div occupi tutto lo spazio dell'icona */
+    height: 100%; /* Assicurati che il div occupi tutto lo spazio dell'icona */
+    display: flex; /* Utilizza flex per centrare il contenuto SVG */
+    justify-content: center; /* Centra l'SVG orizzontalmente */
+    align-items: center; /* Centra l'SVG verticalmente */
+}
+
+.icon > a {
+    display: block; /* Rendi il NavLink un blocco per riempire l'intero spazio */
+    width: 100%; /* Rendi il NavLink largo quanto il suo contenitore */
+    height: 100%; /* Rendi il NavLink alto quanto il suo contenitore */
+}
+
+/* Stili per il contenuto principale quando la sidebar è visibile */
+.content {
+    margin-left: 250px;
+    /* Altri stili per il contenuto */
+}
+/* Media query per dispositivi con larghezza inferiore a 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        bottom: 0; /* Fissa la sidebar in basso */
+        left: 0;
+        width: 100%;
+        height: 40px; /* O l'altezza che preferisci */
+        padding: 10px 0;
+    }
+    .logo-mobile-container {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 101; /* Più alto di .sidebar per essere visibile sopra */
+    }
+    .logo-container{
+        background-color: red;
+    }
+
+    .logo {
+        display: none; /* Nascondi il logo nella barra laterale */
+    }
+
+    .logo-desktop {
+        display: none; /* Nasconde il logo desktop su dispositivi mobili */
+    }
+      
+    .logo-mobile {
+        display: block; /* Assicura che il logo sia visibile */
+        position: fixed; /* Mantiene il logo mobile fisso */
+        top: 10px; /* Distanza dal bordo superiore dello schermo */
+        left: 10px; /* Distanza dal bordo sinistro dello schermo */
+        z-index: 101; /* Assicurati che il logo sia sopra la sidebar */
+        width: 50px; /* Larghezza fissa del logo */
+        height: 50px; /* Altezza fissa del logo */
+    }
+
+    .icon.last-icon {
+        display: none; /* Nasconde l'icona delle impostazioni su schermi più piccoli */
+    }
+    .content {
+        margin-left: 0;
+        margin-bottom: 60px; /* Spazio per la barra di navigazione inferiore */
+    }
+
+    .header-logo {
+        display: block; /* Mostra il logo nell'header */
+        margin: 0 auto; /* Centra il logo */
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: row; /* Distribuisce le icone in orizzontale */
+        justify-content: center; /* Centra le icone orizzontalmente nella sidebar */
+        align-items: center; /* Centra le icone verticalmente */
+        width: 100%; /* Imposta la larghezza al 100% della sidebar */
+        padding: 0; /* Rimuovi il padding se presente */
+    }
+    .icon{
+        flex-grow: 1; /* Distribuisce le icone uniformemente lungo la sidebar */
+        margin-bottom: 40px;
+        width: 30px; /* Larghezza ridotta delle icone */
+        height: 30px; /* Altezza ridotta delle icone */
+        margin: 0 20px;
+    }
+    .icon.selected {
+        border-radius: 10px; /* Mantiene il bordo arrotondato */
+        padding: 10px; /* Mantiene la spaziatura intorno all'icona */
+        width: 10px;
+    }
+}
