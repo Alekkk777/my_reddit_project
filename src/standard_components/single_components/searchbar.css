@@ -1,0 +1,79 @@
+/* File: /src/components/SearchBar/SearchBar.css */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 20px 20px 0px; /* 175px di sidebar + 20px di spazio */
+    background-color: rgb(34,34,34);
+    border-radius: 25px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    width: calc(95% - 195px); /* Puoi regolare questo se necessario */
+}
+
+.search-icon-container {
+    margin-right: 5px; /* Riduci lo spazio tra l'icona e il campo di input */
+    display: flex;
+    align-items: center; /* Centra verticalmente l'icona */
+}
+
+.search-icon-container svg {
+    width: 15px; /* Riduci ulteriormente la larghezza dell'icona */
+    height: 15px; /* Riduci ulteriormente l'altezza dell'icona */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: rgb(34,34,34); /* Assicurati che il colore di sfondo corrisponda a quello della barra di ricerca */
+    color: #fff; /* Cambia il colore del testo per una migliore leggibilità su sfondo scuro */
+    padding: 8px; /* Aggiungi del padding per allontanare il testo dai bordi */
+    border-radius: 15px; /* Opzionale: arrotonda i bordi del campo di input */
+    font-size: 14px; /* Riduci la dimensione del testo */
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        position: fixed; /* Assicurati che la barra di ricerca sia posizionata in modo fisso */
+        top: 100px; /* Distanza dal bordo superiore */
+        right: 10px; /* Distanza dal bordo destro */
+        width: 40px; /* Larghezza iniziale per mostrare solo l'icona di ricerca */
+        justify-content: center; /* Centra l'icona di ricerca */
+        margin: 0; /* Rimuovi i margini */
+        border-radius: 50%; /* Rendi la barra di ricerca circolare */
+        padding: 5px; /* Riduci il padding */
+        height: 40px; /* Imposta un'altezza fissa per la barra di ricerca */
+        transition: width 0.3s ease, padding 0.3s ease, border-radius 0.3s ease; /* Transizioni fluide per larghezza, padding e border-radius */
+        z-index: 1000; /* Assicurati che sia al di sopra degli altri elementi */
+    }
+
+    .search-input {
+        width: 0; /* Nasconde il campo di input quando la barra di ricerca non è attiva */
+        border: none;
+        outline: none;
+        background-color: rgb(34,34,34);
+        color: #fff;
+        padding: 0;
+        border-radius: 15px;
+        font-size: 14px;
+        transition: width 0.3s ease; /* Transizione fluida per la larghezza */
+    }
+
+    .search-bar.active {
+        width: 30%; /* Larghezza della barra di ricerca quando è attiva */
+        border-radius: 25px; /* Ripristina i bordi arrotondati quando la barra è attiva */
+        padding: 8px; /* Padding standard */
+        right: 20%; /* Centra la barra di ricerca attiva */
+        height: auto; /* Altezza auto per adattarsi al contenuto */
+        margin-right: 0;
+        position: fixed;
+        right: 20px;
+    }
+
+    .search-input.active {
+        display: block; /* Mostra il campo di input quando la barra di ricerca è attiva */
+        width: 30%; /* Fai in modo che l'input occupi tutta la larghezza della barra di ricerca */
+        padding: 8px; /* Aggiungi del padding per allontanare il testo dai bordi */
+    }
+}

@@ -31,7 +31,6 @@ body{
     left: 50%; /* Posiziona il centro del logo a metà della sidebar */
     transform: translateX(-50%); /* Centra orizzontalmente il logo all'interno della sidebar */
     width: 100%; /* Imposta la larghezza al 100% della sidebar per permettere il centramento */
-    z-index: 11; /* Assicurati che il logo-container sia sopra la sidebar */
 }
 .logo-desktop {
     background-color: rgb(34,34,34);
@@ -96,18 +95,23 @@ body{
 /* Media query per dispositivi con larghezza inferiore a 768px */
 @media (max-width: 768px) {
     .sidebar {
+        position: fixed;
         bottom: 0; /* Fissa la sidebar in basso */
         left: 0;
+        right: 0; /* Assicurati che la sidebar si estenda per tutta la larghezza */
+        top: auto; /* Annulla la regola top della sidebar nel desktop mode */
+        height: 80px; /* Altezza fissa per la sidebar */
+        flex-direction: row; /* Disponi le icone in orizzontale */
+        align-items: center; /* Centra le icone verticalmente */
+        justify-content: space-around; /* Distribuisci uniformemente le icone */
+        padding: 0; /* Annulla il padding della sidebar nel desktop mode */
         width: 100%;
-        height: 40px; /* O l'altezza che preferisci */
-        padding: 10px 0;
     }
     .logo-mobile-container {
         display: block;
         position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 101; /* Più alto di .sidebar per essere visibile sopra */
+        top: 20px;
+        left: 20px;
     }
     .logo-container{
         background-color: red;
@@ -124,9 +128,8 @@ body{
     .logo-mobile {
         display: block; /* Assicura che il logo sia visibile */
         position: fixed; /* Mantiene il logo mobile fisso */
-        top: 10px; /* Distanza dal bordo superiore dello schermo */
-        left: 10px; /* Distanza dal bordo sinistro dello schermo */
-        z-index: 101; /* Assicurati che il logo sia sopra la sidebar */
+        top: 20px; /* Distanza dal bordo superiore dello schermo */
+        left: 20px; /* Distanza dal bordo sinistro dello schermo */
         width: 50px; /* Larghezza fissa del logo */
         height: 50px; /* Altezza fissa del logo */
     }
@@ -151,16 +154,14 @@ body{
         width: 100%; /* Imposta la larghezza al 100% della sidebar */
         padding: 0; /* Rimuovi il padding se presente */
     }
-    .icon{
-        flex-grow: 1; /* Distribuisce le icone uniformemente lungo la sidebar */
-        margin-bottom: 40px;
-        width: 30px; /* Larghezza ridotta delle icone */
-        height: 30px; /* Altezza ridotta delle icone */
-        margin: 0 20px;
+    .icon {
+        width: 50px; /* Larghezza ridotta delle icone */
+        height: 50px; /* Altezza ridotta delle icone */
+        margin: 20px 20px; /* Rimuovi i margini per massimizzare lo spazio */
     }
     .icon.selected {
         border-radius: 10px; /* Mantiene il bordo arrotondato */
         padding: 10px; /* Mantiene la spaziatura intorno all'icona */
-        width: 10px;
+        width: 50px;
     }
 }

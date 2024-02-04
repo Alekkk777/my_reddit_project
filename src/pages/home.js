@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from '../components/sidebar'; // Importa il componente Sidebar
+import StComponents from '../standard_components/st_components';
 
 function HomePage() {
     return (
       <div>
-        <Sidebar /> {/* Utilizza il componente Sidebar */}
+        <StComponents /> {/* Utilizza il componente Sidebar */}
         {/* Contenuto della HomePage */}
       </div>
     );

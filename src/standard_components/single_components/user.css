@@ -1,0 +1,53 @@
+/* File: userProfile.css */
+
+.user-profile-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: fixed; /* Posiziona l'icona del profilo in modo fisso */
+    top: 20px; /* Distanza dal bordo superiore dello schermo */
+    right: 20px; /* Distanza dal bordo destro dello schermo */
+    z-index: 1000; /* Assicurati che l'icona del profilo sia al di sopra degli altri elementi */
+
+}
+
+.profile-pic-container {
+    border-radius: 50%;
+    border: 3px solid rgb(235,85,40);
+    background-color: rgb(34,34,34);
+
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    /* Aggiungi qui ulteriori stili per il tuo menu a discesa */
+}
+
+@media (max-width: 768px) {
+    .user-profile-container {
+        position: fixed; /* Posiziona l'icona del profilo in modo fisso */
+        right: 20px; /* Distanza dal bordo destro dello schermo */
+        top: 20px; /* Distanza dal bordo superiore dello schermo */
+        z-index: 1000; /* Assicurati che l'icona del profilo sia al di sopra degli altri elementi */
+        right: 10px;
+    }
+
+    .profile-pic {
+        width: 40px; /* Riduci la dimensione dell'immagine del profilo */
+        height: 40px; /* Riduci la dimensione dell'immagine del profilo */
+        /* ... altri stili ... */
+    }
+}

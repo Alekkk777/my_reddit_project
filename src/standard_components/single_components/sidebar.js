@@ -1,15 +1,15 @@
 // File: /src/components/Sidebar/Sidebar.js
 
 import React, { useState } from 'react';
-import { NavLink, useResolvedPath, useMatch } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './sidebar.css'; // Assicurati che il percorso sia corretto
-import LogoDesktop from '../materials/reddit_logo_desktop.svg'; // Percorso al tuo logo per desktop
-import LogoMobile from '../materials/reddit_logo_mobile.svg'; // Percorso al tuo logo per mobile
-import { ReactComponent as HomeIcon } from '../materials/home_icon.svg';
-import { ReactComponent as PopularIcon } from '../materials/fire_icon.svg';
-import { ReactComponent as CommunityIcon } from '../materials/community_icon.svg';
-import { ReactComponent as PlusIcon } from '../materials/plus_icon.svg';
-import { ReactComponent as LogoutIcon } from '../materials/exit_icon.svg';
+import LogoDesktop from '../../materials/reddit_logo_desktop.svg'; // Percorso al tuo logo per desktop
+import LogoMobile from '../../materials/reddit_logo_mobile.svg'; // Percorso al tuo logo per mobile
+import { ReactComponent as HomeIcon } from '../../materials/home_icon.svg';
+import { ReactComponent as PopularIcon } from '../../materials/fire_icon.svg';
+import { ReactComponent as CommunityIcon } from '../../materials/community_icon.svg';
+import { ReactComponent as PlusIcon } from '../../materials/plus_icon.svg';
+import { ReactComponent as LogoutIcon } from '../../materials/exit_icon.svg';
 
 function Sidebar() {
   const [selected, setSelected] = useState('home');
