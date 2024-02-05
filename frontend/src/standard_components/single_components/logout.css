@@ -1,0 +1,61 @@
+/* File: logoutDialog.css */
+
+.logout-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1002; /* Assicurati che sia sopra tutto il resto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logout-dialog {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logout-dialog-message {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .logout-dialog-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .logout-dialog-confirm, .logout-dialog-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-dialog-confirm {
+    background-color: rgb(235, 85, 40);
+    color: white;
+  }
+  
+  .logout-dialog-cancel {
+    background-color: #ccc;
+  }
+  
+  .logout-dialog-confirm:hover {
+    background-color: rgb(255, 103, 57);
+  }
+  
+  .logout-dialog-cancel:hover {
+    background-color: #bbb;
+  }
+  

@@ -1,0 +1,73 @@
+/* File: LoginDropdown.css */
+
+.login-dropdown, .register-dropdown {
+    position: fixed; /* Posiziona il riquadro in modo fisso sulla pagina */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translate(-50%, -50%); /* Regola il centramento */
+    background-color: rgb(34,34,34); /* Colore di sfondo */
+    padding: 20px; /* Padding intorno al contenuto del riquadro */
+    border-radius: 10px; /* Bordi arrotondati */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Ombra per dare profondità */
+    z-index: 1001; /* Assicurati che sia sopra l'overlay */
+    width: 300px; /* Larghezza del riquadro */
+    box-sizing: border-box; /* Per includere padding e bordi nel calcolo della larghezza */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-dropdown input, .register-dropdown input {
+    width: calc(100% - 20px); /* Larghezza completa meno il padding */
+    margin-bottom: 10px; /* Spazio tra gli input */
+    padding: 10px; /* Padding intorno agli input */
+    border-radius: 5px; /* Bordi arrotondati per gli input */
+    border: 1px solid #ddd; /* Bordo sottile per gli input */
+    background-color: #fff; /* Colore di sfondo per gli input */
+    margin-bottom: 15px;
+}
+
+.login-dropdown button, .register-dropdown button {
+    width: 100%; /* Larghezza completa */
+    padding: 10px; /* Padding intorno al testo del bottone */
+    background-color: rgb(235,85,40); /* Colore di sfondo del bottone */
+    color: #fff; /* Colore del testo del bottone */
+    border: none; /* Nessun bordo per il bottone */
+    border-radius: 5px; /* Bordi arrotondati per il bottone */
+    cursor: pointer; /* Cambia il cursore quando sopra il bottone */
+}
+
+.login-dropdown a, .register-dropdown a {
+    display: block; /* Fa si che l'elemento a occupi tutta la larghezza */
+    margin-top: 10px; /* Spazio sopra il link */
+    color: rgb(235,85,40); /* Colore del link */
+    cursor: pointer; /* Cambia il cursore quando sopra il link */
+    text-align: center; /* Centra il testo del link */
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro semi-trasparente */
+    z-index: 1000; /* Assicurati che sia sotto il riquadro di login ma sopra tutto il resto */
+}
+.link-button {
+    background: none;
+    border: none;
+    color: rgb(235,85,40); /* Stesso colore arancione del pulsante */
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    margin-top: 10px; /* Spazio sopra il link */
+}
+
+.link-button:hover {
+    color: #fff; /* Cambia colore al passaggio del mouse */
+    text-decoration: none;
+}
+

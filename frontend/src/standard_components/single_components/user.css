@@ -29,11 +29,27 @@
     position: absolute;
     right: 0;
     top: 60px;
-    background-color: white;
+    background-color: rgb(235,85,40);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
     /* Aggiungi qui ulteriori stili per il tuo menu a discesa */
+}
+.user-profile-container button {
+    padding: 10px 20px;
+    background-color: rgb(235, 85, 40); /* Colore di sfondo arancione */
+    color: white; /* Testo bianco */
+    border: none;
+    border-radius: 20px; /* Bordi arrotondati */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold; /* Testo in grassetto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+.user-profile-container button:hover {
+    background-color: rgb(255, 103, 57); /* Colore più chiaro al passaggio del mouse */
 }
 
 @media (max-width: 768px) {

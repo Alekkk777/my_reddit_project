@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
+import LogoutDialog from './logout';
 import './sidebar.css'; // Assicurati che il percorso sia corretto
 import LogoDesktop from '../../materials/reddit_logo_desktop.svg'; // Percorso al tuo logo per desktop
 import LogoMobile from '../../materials/reddit_logo_mobile.svg'; // Percorso al tuo logo per mobile
@@ -11,8 +12,25 @@ import { ReactComponent as CommunityIcon } from '../../materials/community_icon.
 import { ReactComponent as PlusIcon } from '../../materials/plus_icon.svg';
 import { ReactComponent as LogoutIcon } from '../../materials/exit_icon.svg';
 
-function Sidebar() {
-  const [selected, setSelected] = useState('home');
+function Sidebar({ setIsLoggedIn }) {
+  const [selected] = useState('home');
+  const [showLogoutDialog, setShowLogoutDialog] = useState(false);
+
+  const handleLogoutClick = () => {
+    setShowLogoutDialog(true); // Mostra il dialogo di conferma del logout
+  };
+
+  const handleConfirmLogout = async () => {
+    // Qui invii la richiesta di logout al server
+    // Esempio di fetch() omesso per brevità
+    setIsLoggedIn(false); // Aggiorna lo stato di autenticazione
+    setShowLogoutDialog(false); // Chiudi il dialogo di conferma del logout
+    // Qui puoi anche reindirizzare l'utente alla pagina di login se necessario
+  };
+
+  const handleCancelLogout = () => {
+    setShowLogoutDialog(false); // Chiudi il dialogo di conferma del logout
+  };
 
   return (
     <> 
@@ -53,9 +71,12 @@ function Sidebar() {
             </div>
           </NavLink>
           {/* Assumi che "logout" sia un'azione e non una pagina, quindi usiamo onClick */}
-          <div className={`icon last-icon ${selected === 'logout' ? 'selected' : ''}`} onClick={() => setSelected('logout')}>
+          <div className={`icon last-icon ${selected === 'logout' ? 'selected' : ''}`} onClick={handleLogoutClick}>
             <LogoutIcon />
           </div>
+          {showLogoutDialog && (
+            <LogoutDialog onConfirmLogout={handleConfirmLogout} onCancelLogout={handleCancelLogout} />
+          )}
         </div>
       </div>
     </>
