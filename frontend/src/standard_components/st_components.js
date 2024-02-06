@@ -1,5 +1,3 @@
-// StComponents.js
-
 import React from 'react';
 import Sidebar from '../standard_components/single_components/sidebar';
 import SearchBar from '../standard_components/single_components/searchbar';
@@ -10,15 +8,14 @@ function StComponents() {
     return (
       <div className="main-container">
         <Sidebar />
-
-        <UserProfile />
-
-        <SearchBar />
-
-        {/* Contenuto della HomePage */}
+        <div className='content-container'>
+          <div className='header-container'>
+            <UserProfile />
+            <SearchBar />
+          </div>
+        </div>
       </div>
     );
 }
 
 export default StComponents;
-

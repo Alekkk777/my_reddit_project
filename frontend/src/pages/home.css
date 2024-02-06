@@ -1,0 +1,43 @@
+.main-content {
+    margin-left: 0px; /* Se hai una sidebar, imposta questo valore alla sua larghezza */
+    padding: 20px; /* Padding intorno ai post per il contenuto principale */
+    padding-top: 0px; /* Riduci lo spazio sopra per alzare la sezione con il titolo */
+}
+
+.main-title {
+    color: #ffffff;
+    margin-bottom: 20px; /* Spazio tra il titolo e i post */
+    margin-left: 0; /* Rimuovi il margine sinistro per spostare il titolo più a sinistra */
+    font-size: 40px;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.posts-scrollable {
+    max-height: 70vh; /* Imposta l'altezza massima per i post basata sulla viewport */
+    overflow-y: auto; /* Permette lo scorrimento verticale */
+    scrollbar-width: thick; /* per Firefox */
+    scrollbar-color: #ff4500; /* per Firefox */
+    margin-left: 0; /* Rimuovi margine sinistro per avvicinare i post alla sidebar */
+}
+
+.posts-scrollable::-webkit-scrollbar {
+    width: 10px; /* Larghezza della barra di scorrimento */
+}
+
+.posts-scrollable::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Colore dello sfondo della barra di scorrimento */
+    border-radius: 10px; /* Rendi i bordi della traccia leggermente arrotondati */
+}
+
+.posts-scrollable::-webkit-scrollbar-thumb {
+    background-color: #ff4500; /* Colore della barra di scorrimento */
+    border-radius: 10px; /* Bordi arrotondati del cursore della barra di scorrimento */
+    border: 1px solid #ff4500; /* Bordi solidi dello stesso colore della thumb per aumentarne la dimensione visiva */
+    background-clip: content-box; /* Evita che lo sfondo invada lo spazio del bordo */
+}
+@media (max-width: 768px) {
+    .main-title{
+        font-size: 30px;
+        margin-top: -0.5px;
+    }
+}

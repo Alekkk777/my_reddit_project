@@ -1,0 +1,23 @@
+.content-container {
+    margin-left: 250px; /* o la larghezza della tua sidebar */
+    padding-top: 100px; /* Spazio per la barra di ricerca e il profilo utente */
+  }
+  
+  .header-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 250px; /* o la larghezza della tua sidebar */
+    z-index: 10;
+    /* Assicurati che i margini e il padding siano coerenti con il resto del layout */
+  }
+
+  
+  .posts-scrollable {
+    max-height: 500px; /* Imposta l'altezza massima per i post */
+    overflow-y: auto; /* Permette lo scorrimento verticale */
+    /* Aggiungi padding, margin, ecc., secondo necessità */
+  }
+  
+  /* Aggiungi qui ulteriori stili per il titolo e i post */
+  

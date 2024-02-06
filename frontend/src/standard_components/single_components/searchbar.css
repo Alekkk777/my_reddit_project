@@ -9,6 +9,8 @@
     border-radius: 25px;
     transition: width 0.3s ease, padding 0.3s ease;
     width: calc(95% - 195px); /* Puoi regolare questo se necessario */
+    position: fixed;
+    width: 70%;
 }
 
 .search-icon-container {
