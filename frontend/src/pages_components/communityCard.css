@@ -1,0 +1,83 @@
+/* File: communityCard.css */
+
+.community-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.community_identity{
+    display: flex;
+    flex-direction: column;
+}
+
+.community-rank {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(235,85,40); /* Colore arancione per il numero di posizionamento */
+  max-height: 100px;
+}
+
+.community-info {
+  flex-grow: 1;
+  margin-left: 20px; /* Distanza tra il numero di posizionamento e il nome/descrizione */
+  max-height: 100px;
+}
+
+.community-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  max-height: 100px;
+}
+
+.community-description {
+  font-size: 0.9rem;
+  color: #cccccc; /* Colore più chiaro per la descrizione */
+  max-height: 100px;
+  max-width: 500px;
+}
+
+.community-stats {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  max-height: 100px;
+  flex-direction: column; /* Organizza i contenuti in colonna */
+}
+
+.users-icon {
+  width: 30px; /* Dimensione dell'icona degli utenti */
+  margin-right: 5px; /* Distanza tra l'icona e il numero degli utenti */
+  margin-top: 0px;
+}
+
+.users-count {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .community-card {
+    flex-direction: column;
+  }
+
+  .community-rank, .community-info, .community-stats {
+    align-items: center;
+    text-align: center;
+  }
+
+  .community-name, .community-description {
+    align-self: center;
+  }
+
+  .users-icon {
+    margin-right: 0;
+  }
+
+  .users-count {
+    margin-left: 5px;
+  }
+}

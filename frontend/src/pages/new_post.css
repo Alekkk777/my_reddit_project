@@ -1,0 +1,80 @@
+.new-post-container {
+    max-width: 800px; /* Aumenta la larghezza massima */
+    margin: 20px auto;
+    padding: 40px; /* Aumenta il padding */
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+h2 {
+    font-size: 2.5rem; /* Aumenta la dimensione della scritta */
+    margin-bottom: 30px; /* Dà più spazio sotto alla scritta */
+}
+
+.new-post-form .form-group {
+    margin-bottom: 20px; /* Aumenta lo spazio tra gli elementi del form */
+}
+
+.new-post-form .form-group label {
+    display: block;
+    margin-bottom: 10px; /* Aumenta lo spazio sotto la label */
+    font-size: 1.2rem; /* Aumenta la dimensione del testo per la label */
+}
+
+.new-post-form .form-group input[type="text"],
+.new-post-form .form-group textarea {
+    width: 100%;
+    padding: 12px; /* Aumenta il padding */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem; /* Aumenta la dimensione del testo */
+}
+
+.new-post-form .form-group input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 5px; /* Aggiunge spazio sopra */
+}
+
+.submit-btn {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 15px 20px; /* Aumenta il padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem; /* Aumenta la dimensione del testo */
+    margin-top: 10px; /* Aggiunge spazio sopra */
+}
+
+.confirmation-message {
+    color: #0f0;
+    text-align: left; /* Allinea il messaggio di conferma a sinistra */
+    margin-top: 20px; /* Aumenta lo spazio sopra */
+    font-size: 1.2rem; /* Aumenta la dimensione del testo */
+}
+/* Personalizza la barra di scorrimento per tutti gli elementi scrollabili */
+::-webkit-scrollbar {
+    width: 12px; /* Larghezza della barra di scorrimento */
+}
+
+::-webkit-scrollbar-track {
+    background: #2f2f2f; /* Colore dello sfondo della traccia della barra di scorrimento */
+    border-radius: 10px; /* Bordi arrotondati per la traccia della barra di scorrimento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff4500; /* Colore della barra di scorrimento */
+    border-radius: 10px; /* Bordi arrotondati per la barra di scorrimento */
+    border: 3px solid #ff4500; /* Bordo della barra di scorrimento dello stesso colore per effetto "solido" */
+}
+
+/* Stili per Firefox */
+* {
+    scrollbar-width: thin; /* Imposta lo spessore della barra di scorrimento */
+    scrollbar-color: #ff4500 #2f2f2f; /* Imposta il colore della barra di scorrimento e della traccia */
+}

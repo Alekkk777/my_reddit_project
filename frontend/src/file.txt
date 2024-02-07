@@ -16,7 +16,7 @@ Structure Note:
 0. General
 - no notification 
 
-1. home
+
 
 2. Post
 
@@ -32,5 +32,7 @@ Structure Note:
 
 
 
-- write post(togliere da )
-- 
+To-do:
+
+
+- problem with iscriviti 

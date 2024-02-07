@@ -1,0 +1,93 @@
+.post {
+    background-color: rgb(34,34,34); /* Sfondo del post */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Assicura che tutto il contenuto rimanga dentro i bordi arrotondati */
+    margin: 30px 0; /* Spazio sopra e sotto ogni post */
+    width: 99%; /* Larghezza basata sul contenuto */
+    height: auto;
+}
+.post-content {
+    display: flex;
+    align-items: flex-start; /* Allinea gli elementi all'inizio, evitando che si estendano */
+    padding: 15px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+    
+  
+.post-header {
+    padding: 0px;
+    display: flex;
+    flex-direction: column; /* Organizza i contenuti in colonna */
+    align-items: flex-start; /* Allinea gli elementi a sinistra */
+    width: 95%;
+}
+  
+  .post-title {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 5px; /* Riduci lo spazio tra titolo e nome utente */
+    text-align: left;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  
+  .post-user {
+    color: #888;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    background-color: rgb(27,27,27);
+  }
+  
+    
+  .post-likes {
+    display: flex;
+    flex-direction: column; /* Imposta i like e il conteggio in colonna */
+    align-items: right; 
+    font-size: 0.9rem; /* Dimensione del conteggio dei like */
+    height: 50px;
+  }
+  
+  .likes-icon {
+    width: 40px;
+    margin-bottom: 0; /* Riduci o elimina il margine se non necessario */
+    align-items: right;
+    height: 40px;
+  }
+  
+  .likes-count {
+    font-size: 0.75rem;
+    margin-top: 0; /* Riduci o elimina il margine se non necessario */
+    text-align: center;
+    width: 40px;
+    right: 0px;
+  }
+  
+  .post-image-container {
+  
+    width: 100%;
+    margin-top: 20px; /* Assicurati che non ci sia margine extra */
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto; /* L'altezza si adatta in base alla larghezza per mantenere le proporzioni */
+    object-fit: cover; /* Adatta l'immagine al contenitore */
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 500px;
+  }
+  @media (max-width: 768px) {
+    .post-title {
+      font-size: 1.2rem;
+    }
+    .post-user {
+      font-size: 0.9rem;
+    }
+  }
+  

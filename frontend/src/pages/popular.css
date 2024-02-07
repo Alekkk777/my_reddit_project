@@ -1,0 +1,42 @@
+/* popular.css */
+.main-content {
+    margin-left: 0; /* Adegua questo valore in base alla larghezza della tua sidebar */
+    padding: 20px;
+    padding-top: 0; /* Posiziona il titolo più in alto rispetto ai post */
+}
+
+.main-title {
+    color: #ffffff;
+    margin-bottom: 20px; /* Distanza tra il titolo e il contenuto dei post */
+    font-size: 40px;
+    text-align: left;
+}
+
+.posts-scrollable {
+    max-height: 70vh; /* Limita l'altezza massima dei post visualizzati */
+    overflow-y: auto; /* Permette lo scorrimento verticale se il contenuto eccede l'altezza massima */
+    scrollbar-width: thick; /* Per browser che supportano questa proprietà */
+    scrollbar-color: #ff4500 #1a1a1a; /* Personalizza colore della barra e dello sfondo per Firefox */
+}
+
+.posts-scrollable::-webkit-scrollbar {
+    width: 10px; /* Larghezza della barra di scorrimento per Chrome, Safari, Edge */
+}
+
+.posts-scrollable::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Colore dello sfondo della traccia della barra */
+    border-radius: 10px; /* Bordi arrotondati della traccia */
+}
+
+.posts-scrollable::-webkit-scrollbar-thumb {
+    background-color: #ff4500; /* Colore della barra di scorrimento */
+    border-radius: 10px; /* Bordi arrotondati della barra di scorrimento */
+    border: 1px solid #ff4500; /* Bordi solidi dello stesso colore per aumentarne la visibilità */
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 30px; /* Ridimensiona il titolo per dispositivi più piccoli */
+        margin-top: -0.5rem; /* Adegua lo spazio superiore per un aspetto più compatto */
+    }
+}

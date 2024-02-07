@@ -1,0 +1,44 @@
+.community-card {
+    background-color: rgb(34,34,34); /* Sfondo della card */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 20px 0; /* Spazio sopra e sotto ogni card */
+    padding: 20px;
+  }
+  
+  .community-name {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .community-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #888;
+  }
+  
+  .community-subscribers {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .subscribers-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    /* Puoi usare un'icona da una libreria come FontAwesome o un SVG personalizzato */
+  }
+  
+  @media (max-width: 768px) {
+    .community-card {
+      margin: 15px 10px;
+    }
+  
+    .community-name, .community-description, .community-subscribers {
+      text-align: left;
+    }
+  }
+  

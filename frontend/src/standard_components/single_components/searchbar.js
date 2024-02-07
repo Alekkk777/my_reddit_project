@@ -1,12 +1,11 @@
-import React, { useState, useRef, useEffect} from 'react';
-import { ReactComponent as SearchIcon } from '../../materials/search_icon.svg'; // Assicurati di avere questo SVG
-import './searchbar.css'; // Il tuo file CSS
+import React, { useState, useRef, useEffect } from 'react';
+import { ReactComponent as SearchIcon } from '../../materials/search_icon.svg';
+import './searchbar.css';
 
-
-function SearchBar() {
+function SearchBar({ onSearch }) {
     const [isActive, setIsActive] = useState(false);
     const [query, setQuery] = useState("");
-    const searchBarRef = useRef(null);  // Ref per il componente searchBar
+    const searchBarRef = useRef(null);
 
     const toggleSearchBar = () => {
         setIsActive(!isActive);
@@ -14,14 +13,13 @@ function SearchBar() {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        console.log('Searching for:', query);
+        onSearch(query);
     };
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
     };
 
-    // Chiudi la barra di ricerca quando si clicca al di fuori
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
@@ -29,10 +27,7 @@ function SearchBar() {
             }
         };
 
-        // Aggiungi l'event listener quando il componente viene montato
         document.addEventListener('mousedown', handleClickOutside);
-
-        // Rimuovi l'event listener quando il componente viene smontato
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
