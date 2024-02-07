@@ -29,3 +29,7 @@ for developing backend i decide to use:
 - Bcrypt for hashing password
 - Use the environment variable to manage sensitive containers
 backend is used just for developing login features
+
+TESTING
+- React testing-library
+- Jest
